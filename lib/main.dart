@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:test_app/core/providers/shared_prefs_service.dart';
-import 'package:test_app/features/forget_password/forget_password_page.dart';
-import 'package:test_app/features/setting/viewmodels/theme_viewmodel.dart';
-// import 'package:test_app/features/widget_tree.dart';
+import 'package:learning_flutter/core/providers/shared_prefs_service.dart';
+import 'package:learning_flutter/features/forget_password/forget_password_page.dart';
+import 'package:learning_flutter/features/setting/viewmodels/theme_viewmodel.dart';
+// import 'package:learning_flutter/features/widget_tree.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

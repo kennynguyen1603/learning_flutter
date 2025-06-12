@@ -2,8 +2,8 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:test_app/core/providers/shared_prefs_service.dart';
-import 'package:test_app/core/widgets/hero_widget.dart';
+import 'package:learning_flutter/core/providers/shared_prefs_service.dart';
+import 'package:learning_flutter/core/widgets/hero_widget.dart';
 import 'package:pinput/pinput.dart';
 
 class ForgetpasswordPage extends StatefulWidget {

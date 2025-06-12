@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:test_app/core/constants/constants.dart';
-import 'package:test_app/core/providers/navigation_provider.dart';
-import 'package:test_app/core/widgets/navbar_widget.dart';
-import 'package:test_app/features/home/views/home_page.dart';
-import 'package:test_app/features/search/views/search_page.dart';
-import 'package:test_app/features/buttons/views/buttons_page.dart';
-import 'package:test_app/features/gestures/views/gestures_page.dart';
-import 'package:test_app/features/setting/viewmodels/theme_viewmodel.dart';
-import 'package:test_app/features/setting/views/settings_page.dart';
+import 'package:learning_flutter/core/constants/constants.dart';
+import 'package:learning_flutter/core/providers/navigation_provider.dart';
+import 'package:learning_flutter/core/widgets/navbar_widget.dart';
+import 'package:learning_flutter/features/home/views/home_page.dart';
+import 'package:learning_flutter/features/search/views/search_page.dart';
+import 'package:learning_flutter/features/buttons/views/buttons_page.dart';
+import 'package:learning_flutter/features/gestures/views/gestures_page.dart';
+import 'package:learning_flutter/features/setting/viewmodels/theme_viewmodel.dart';
+import 'package:learning_flutter/features/setting/views/settings_page.dart';
 
 List<Widget> pages = [HomePage(), SearchPage(), GesturesPage(), ButtonsPage()];
 

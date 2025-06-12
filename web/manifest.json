@@ -1,6 +1,6 @@
 {
-    "name": "test_app",
-    "short_name": "test_app",
+    "name": "learning_flutter",
+    "short_name": "learning_flutter",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

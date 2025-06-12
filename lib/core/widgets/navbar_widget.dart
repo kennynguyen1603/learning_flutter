@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:test_app/core/providers/navigation_provider.dart';
+import 'package:learning_flutter/core/providers/navigation_provider.dart';
 
 class NavbarWidget extends ConsumerWidget {
   const NavbarWidget({super.key});

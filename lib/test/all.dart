@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:test_app/test/profile.dart';
+import 'package:learning_flutter/test/profile.dart';
 
 void main() {
   runApp(const MyApp());
