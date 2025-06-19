@@ -103,16 +103,12 @@ class _UserInfoPageState extends State<UserInfoPage> {
                   Text('🎂 Tuổi: ${user.age}'),
                   const SizedBox(height: 8),
                   Text(
-                    '🚻 Giới tính: ${user.gender == Gender.male
-                        ? "Nam"
-                        : user.gender == Gender.female
-                        ? "Nữ"
-                        : "Khác"}',
+                    '🚻 Giới tính: ${user.gender == Gender.male ? "Nam" : user.gender == Gender.female ? "Nữ" : "Khác"}',
                   ),
                   const SizedBox(height: 16),
-                  Text(
+                  const Text(
                     '💡 Sở thích:',
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),
@@ -123,9 +119,9 @@ class _UserInfoPageState extends State<UserInfoPage> {
                       child: Text('- $hobby'),
                     ),
                   const SizedBox(height: 16),
-                  Text(
+                  const Text(
                     '👥 Bạn bè:',
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.bold,
                     ),

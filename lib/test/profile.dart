@@ -44,18 +44,18 @@ class ProfileCard extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             // Avatar và thông tin cá nhân
-            Row(
+            const Row(
               children: [
-                const CircleAvatar(
+                CircleAvatar(
                   radius: 40,
                   backgroundImage: NetworkImage(
                     'https://i.pravatar.cc/300',
                   ), // Ảnh đại diện giả lập
                 ),
-                const SizedBox(width: 16),
+                SizedBox(width: 16),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: const [
+                  children: [
                     Text(
                       'John Doe',
                       style: TextStyle(

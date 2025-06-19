@@ -122,7 +122,7 @@ class _MyHomePageState extends State<MyHomePage> {
               alignment: Alignment.center,
               decoration: BoxDecoration(
                 color: Colors.amber[600],
-                image: DecorationImage(
+                image: const DecorationImage(
                   image: NetworkImage('https://i.pravatar.cc/300'),
                   fit: BoxFit.cover,
                 ),
@@ -146,7 +146,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-
             const ProfileCard(),
             Column(
               children: [

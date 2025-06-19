@@ -10,7 +10,12 @@ import 'package:learning_flutter/features/gestures/views/gestures_page.dart';
 import 'package:learning_flutter/features/setting/viewmodels/theme_viewmodel.dart';
 import 'package:learning_flutter/features/setting/views/settings_page.dart';
 
-List<Widget> pages = [HomePage(), SearchPage(), GesturesPage(), ButtonsPage()];
+List<Widget> pages = [
+  const HomePage(),
+  const SearchPage(),
+  const GesturesPage(),
+  const ButtonsPage()
+];
 
 class WidgetTree extends ConsumerStatefulWidget {
   const WidgetTree({super.key});
@@ -60,10 +65,9 @@ class _WidgetTreeState extends ConsumerState<WidgetTree> {
             builder: (context, ref, child) {
               final isDarkMode = ref.watch(themeProvider);
               return IconButton(
-                icon:
-                    isDarkMode
-                        ? const Icon(Icons.light_mode)
-                        : const Icon(Icons.dark_mode),
+                icon: isDarkMode
+                    ? const Icon(Icons.light_mode)
+                    : const Icon(Icons.dark_mode),
                 onPressed: () {
                   ref.read(themeProvider.notifier).toggleTheme();
                 },
@@ -92,7 +96,7 @@ class _WidgetTreeState extends ConsumerState<WidgetTree> {
           return pages[selectedPage];
         },
       ),
-      bottomNavigationBar: NavbarWidget(),
+      bottomNavigationBar: const NavbarWidget(),
     );
   }
 }

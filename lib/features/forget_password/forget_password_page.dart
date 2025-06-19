@@ -53,9 +53,8 @@ class _ForgetpasswordPageState extends State<ForgetpasswordPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                HeroWidget(title: 'Hero Animation'),
+                const HeroWidget(title: 'Hero Animation'),
                 const SizedBox(height: 16.0),
-
                 Text(
                   'Forget Password?',
                   style: TextStyle(
@@ -64,9 +63,7 @@ class _ForgetpasswordPageState extends State<ForgetpasswordPage> {
                     color: Theme.of(context).colorScheme.onSurface,
                   ),
                 ),
-
                 const SizedBox(height: 16.0),
-
                 Text(
                   'Enter your Email, we will send you a verification code.',
                   textAlign: TextAlign.center,
@@ -75,9 +72,7 @@ class _ForgetpasswordPageState extends State<ForgetpasswordPage> {
                     color: Theme.of(context).colorScheme.onSurface,
                   ),
                 ),
-
                 const SizedBox(height: 16.0),
-
                 TextField(
                   controller: emailController,
                   decoration: InputDecoration(
@@ -89,9 +84,7 @@ class _ForgetpasswordPageState extends State<ForgetpasswordPage> {
                     prefixIcon: const Icon(Icons.email_outlined),
                   ),
                 ),
-
                 const SizedBox(height: 16.0),
-
                 ElevatedButton(
                   onPressed: () {
                     handleForgetPassword();
@@ -140,10 +133,8 @@ class _VerifyCodeState extends State<VerifyCode> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                HeroWidget(title: 'Hero Animation'),
-
+                const HeroWidget(title: 'Hero Animation'),
                 const SizedBox(height: 16.0),
-
                 Text(
                   'Verification Code',
                   style: TextStyle(
@@ -153,7 +144,6 @@ class _VerifyCodeState extends State<VerifyCode> {
                   ),
                 ),
                 const SizedBox(height: 16.0),
-
                 Text(
                   'Enter the verification code. We just sent it to your email.',
                   textAlign: TextAlign.center,
@@ -162,13 +152,9 @@ class _VerifyCodeState extends State<VerifyCode> {
                     color: Theme.of(context).colorScheme.onSurface,
                   ),
                 ),
-
                 const SizedBox(height: 16.0),
-
-                PinputExample(),
-
+                const PinputExample(),
                 const SizedBox(height: 16.0),
-
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(
@@ -266,10 +252,8 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                HeroWidget(title: 'Hero Animation'),
-
+                const HeroWidget(title: 'Hero Animation'),
                 const SizedBox(height: 16.0),
-
                 Text(
                   'Create New Password',
                   style: TextStyle(
@@ -278,9 +262,7 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                     color: Theme.of(context).colorScheme.onSurface,
                   ),
                 ),
-
                 const SizedBox(height: 16.0),
-
                 Text(
                   'Enter your new password. Make sure it is strong and secure.',
                   textAlign: TextAlign.center,
@@ -289,9 +271,7 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                     color: Theme.of(context).colorScheme.onSurface,
                   ),
                 ),
-
                 const SizedBox(height: 16.0),
-
                 TextField(
                   controller: newPasswordController,
                   obscureText: true,
@@ -304,9 +284,7 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                     prefixIcon: const Icon(Icons.lock_outline),
                   ),
                 ),
-
                 const SizedBox(height: 16.0),
-
                 TextField(
                   controller: confirmPasswordController,
                   obscureText: true,
@@ -319,9 +297,7 @@ class _CreateNewPasswordState extends State<CreateNewPassword> {
                     prefixIcon: const Icon(Icons.lock_outline),
                   ),
                 ),
-
                 const SizedBox(height: 16.0),
-
                 ElevatedButton(
                   onPressed: () {
                     handleCreateNewPassword();
@@ -383,7 +359,7 @@ class _ConfirmState extends State<Confirm> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                HeroWidget(title: 'Hero Animation'),
+                const HeroWidget(title: 'Hero Animation'),
 
                 const SizedBox(height: 16.0),
 

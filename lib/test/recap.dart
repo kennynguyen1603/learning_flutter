@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.dark,
         ),
       ),
-      home: MyCounter(),
+      home: const MyCounter(),
     );
   }
 }
@@ -139,7 +139,7 @@ class _MyCounterState extends State<MyCounter> {
         ],
       ),
       bottomNavigationBar: NavigationBar(
-        destinations: [
+        destinations: const [
           NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
           NavigationDestination(icon: Icon(Icons.search), label: 'Search'),
           NavigationDestination(icon: Icon(Icons.settings), label: 'Settings'),

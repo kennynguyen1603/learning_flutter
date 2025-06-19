@@ -3,11 +3,13 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:learning_flutter/core/providers/shared_prefs_service.dart';
 import 'package:learning_flutter/features/forget_password/forget_password_page.dart';
 import 'package:learning_flutter/features/setting/viewmodels/theme_viewmodel.dart';
-// import 'package:learning_flutter/features/widget_tree.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await SharedPrefsService.init();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const ProviderScope(child: MyApp()));
 }
 

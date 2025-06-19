@@ -53,18 +53,15 @@ class _SearchPageState extends State<SearchPage> {
               onEditingComplete: () {
                 setState(() {});
               },
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 labelText: 'Search',
                 border: OutlineInputBorder(),
               ),
             ),
           ),
           Text('Searching for: ${_searchController.text}'),
-
           Divider(thickness: 5, color: Colors.grey.shade300, endIndent: 200),
-
-          SizedBox(height: 50, child: VerticalDivider()),
-
+          const SizedBox(height: 50, child: VerticalDivider()),
           Checkbox(
             value: isChecked,
             onChanged: (value) {
@@ -73,7 +70,6 @@ class _SearchPageState extends State<SearchPage> {
               });
             },
           ),
-
           CheckboxListTile(
             title: const Text('Check me'),
             value: isChecked,
@@ -83,7 +79,6 @@ class _SearchPageState extends State<SearchPage> {
               });
             },
           ),
-
           Switch(
             value: isSwitched,
             activeColor: Colors.red,
@@ -93,7 +88,6 @@ class _SearchPageState extends State<SearchPage> {
               });
             },
           ),
-
           SwitchListTile(
             title: const Text('Switch me'),
             value: isSwitched,
@@ -103,7 +97,6 @@ class _SearchPageState extends State<SearchPage> {
               });
             },
           ),
-
           Column(
             children: [
               Text('Scroll me: ${_sliderValue.round()}'),
@@ -121,7 +114,6 @@ class _SearchPageState extends State<SearchPage> {
               ),
             ],
           ),
-
           Slider(
             value: _currentVolume,
             max: 5,
@@ -133,7 +125,6 @@ class _SearchPageState extends State<SearchPage> {
               });
             },
           ),
-
           InkWell(
             splashColor: Colors.blue.withAlpha(30),
             onTap: () {
@@ -145,24 +136,21 @@ class _SearchPageState extends State<SearchPage> {
                 print('Image tapped');
               }
             },
-            child:
-                isTapped
-                    ? Container(
-                      width: double.infinity,
-                      height: 200,
-                      color: Colors.white12,
-                    )
-                    : Image.asset(
-                      'assets/images/bg.jpg',
-                      width: double.infinity,
-                      height: 200,
-                      fit: BoxFit.cover,
-                      // colorBlendMode: BlendMode.darken,
-                    ),
+            child: isTapped
+                ? Container(
+                    width: double.infinity,
+                    height: 200,
+                    color: Colors.white12,
+                  )
+                : Image.asset(
+                    'assets/images/bg.jpg',
+                    width: double.infinity,
+                    height: 200,
+                    fit: BoxFit.cover,
+                    // colorBlendMode: BlendMode.darken,
+                  ),
           ),
-
           const SizedBox(height: 20),
-
           DropdownMenu<ColorLabel>(
             initialSelection: ColorLabel.green,
             // controller: colorController,
@@ -177,24 +165,23 @@ class _SearchPageState extends State<SearchPage> {
             },
             dropdownMenuEntries:
                 ColorLabel.values.map<DropdownMenuEntry<ColorLabel>>((
-                  ColorLabel color,
-                ) {
-                  return DropdownMenuEntry<ColorLabel>(
-                    value: color,
-                    label: color.label,
-                    enabled: color.label != 'Grey',
-                    style: MenuItemButton.styleFrom(
-                      foregroundColor: color.color,
-                    ),
-                  );
-                }).toList(),
+              ColorLabel color,
+            ) {
+              return DropdownMenuEntry<ColorLabel>(
+                value: color,
+                label: color.label,
+                enabled: color.label != 'Grey',
+                style: MenuItemButton.styleFrom(
+                  foregroundColor: color.color,
+                ),
+              );
+            }).toList(),
           ),
-
           ListView.builder(
             shrinkWrap:
                 true, // Cho phép ListView tính toán chiều cao dựa trên nội dung
             physics:
-                NeverScrollableScrollPhysics(), // Tắt scroll riêng của ListView
+                const NeverScrollableScrollPhysics(), // Tắt scroll riêng của ListView
             padding: const EdgeInsets.symmetric(
               vertical: 16,
             ), // Thêm khoảng cách trên và dưới

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:learning_flutter/core/widgets/hero_widget.dart';
 import 'package:learning_flutter/features/widget_tree.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import '../service/auth_service.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -10,6 +12,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final AuthService _authService = AuthService();
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   bool obscureText = true;
@@ -27,7 +30,8 @@ class _LoginPageState extends State<LoginPage> {
       // Show error message
       ScaffoldMessenger.of(
         context,
-      ).showSnackBar(SnackBar(content: Text('Invalid email or password')));
+      ).showSnackBar(
+          const SnackBar(content: Text('Invalid email or password')));
     }
   }
 
@@ -37,9 +41,37 @@ class _LoginPageState extends State<LoginPage> {
     });
   }
 
+  Future<void> handleGoogleSignIn() async {
+    try {
+      final UserCredential? result = await _authService.signInWithGoogle();
+      if (result != null && mounted) {
+        Navigator.of(context).pushReplacement(
+          MaterialPageRoute(builder: (context) => const WidgetTree()),
+        );
+      }
+    } on FirebaseAuthException catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Authentication failed: ${e.message}'),
+            backgroundColor: Colors.red,
+          ),
+        );
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('An error occurred: $e'),
+            backgroundColor: Colors.red,
+          ),
+        );
+      }
+    }
+  }
+
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
   }
 
@@ -60,7 +92,7 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              HeroWidget(title: 'Hero Animation'),
+              const HeroWidget(title: 'Hero Animation'),
 
               const SizedBox(height: 16.0),
 
@@ -87,7 +119,7 @@ class _LoginPageState extends State<LoginPage> {
                     borderRadius: BorderRadius.circular(15.0),
                   ),
                   hintText: 'Enter your password',
-                  prefixIcon: Icon(Icons.lock_outline),
+                  prefixIcon: const Icon(Icons.lock_outline),
                   suffixIcon: IconButton(
                     icon: Icon(
                       obscureText ? Icons.visibility_off : Icons.visibility,
@@ -115,6 +147,24 @@ class _LoginPageState extends State<LoginPage> {
                   style: TextStyle(
                     fontSize: 18,
                     color: Theme.of(context).colorScheme.onPrimary,
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 16.0),
+
+              // Add Google Sign In button
+              ElevatedButton.icon(
+                onPressed: handleGoogleSignIn,
+                icon: Image.asset('assets/google_logo.png', height: 24.0),
+                label: const Text('Sign in with Google'),
+                style: ElevatedButton.styleFrom(
+                  minimumSize: const Size(double.infinity, 60),
+                  backgroundColor: Colors.white,
+                  foregroundColor: Colors.black87,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16.0),
+                    side: BorderSide(color: Colors.grey.shade300),
                   ),
                 ),
               ),
