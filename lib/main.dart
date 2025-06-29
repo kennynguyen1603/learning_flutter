@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:learning_flutter/core/providers/shared_prefs_service.dart';
-import 'package:learning_flutter/features/forget_password/forget_password_page.dart';
+import 'package:learning_flutter/features/auth/view/login_page.dart';
 import 'package:learning_flutter/features/setting/viewmodels/theme_viewmodel.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -97,9 +97,9 @@ class MyApp extends ConsumerWidget {
     // );
     final isDarkMode = ref.watch(themeProvider);
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: isDarkMode ? ThemeData.dark() : ThemeData.light(),
-      home: const ForgetpasswordPage(),
-    );
+        debugShowCheckedModeBanner: false,
+        theme: isDarkMode ? ThemeData.dark() : ThemeData.light(),
+        // home: const ForgetpasswordPage(), // Bài tập quên mật khẩu 4 màn hình, nhận được dữ liệu ở màn hình cuối
+        home: const LoginPage());
   }
 }

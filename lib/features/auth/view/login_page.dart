@@ -156,7 +156,7 @@ class _LoginPageState extends State<LoginPage> {
               // Add Google Sign In button
               ElevatedButton.icon(
                 onPressed: handleGoogleSignIn,
-                icon: Image.asset('assets/google_logo.png', height: 24.0),
+                // icon: Image.asset('assets/google_logo.jpg', height: 24.0),
                 label: const Text('Sign in with Google'),
                 style: ElevatedButton.styleFrom(
                   minimumSize: const Size(double.infinity, 60),

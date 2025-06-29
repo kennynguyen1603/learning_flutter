@@ -60,13 +60,13 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyAI5bK_AWvGv317BIHTmLuxXmE4Wa9q_4M',
-    appId: '1:967719220804:ios:739d64029f1c8429db2e11',
+    appId: '1:967719220804:ios:bdeff19128ff47f2db2e11',
     messagingSenderId: '967719220804',
     projectId: 'fairsplit-91ade',
     storageBucket: 'fairsplit-91ade.firebasestorage.app',
     iosClientId:
-        '967719220804-nq9tdbbq48h13gngg415hufcn9qceimn.apps.googleusercontent.com',
-    iosBundleId: 'com.example.testApp',
+        '967719220804-35p45ahsplqqal8nkbdfeldvsuqq76os.apps.googleusercontent.com',
+    iosBundleId: 'com.example.learningFlutter',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
